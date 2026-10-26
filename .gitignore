@@ -37,7 +37,10 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Editor & OS
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/extensions.json
 .idea/
 .DS_Store
 Thumbs.db
