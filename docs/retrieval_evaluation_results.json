@@ -1,0 +1,713 @@
+{
+  "BM25": {
+    "mrr": 1.0,
+    "recall": {
+      "recall@1": 0.9,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    "precision": {
+      "precision@1": 1.0,
+      "precision@3": 0.4,
+      "precision@5": 0.24
+    },
+    "query_evaluations": [
+      {
+        "query": "HTTP 502 Bad Gateway and 500 internal server error spike after latest deployment",
+        "expected": [
+          "RB-5XX-001",
+          "RB-OPS-006"
+        ],
+        "retrieved": [
+          "RB-5XX-001",
+          "RB-LAT-003",
+          "RB-OPS-006",
+          "RB-AUTH-004",
+          "RB-DB-002"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 0.5,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.667,
+          "precision@5": 0.4
+        }
+      },
+      {
+        "query": "database connection pool timeout QueuePool limit of size 20 overflow reached",
+        "expected": [
+          "RB-DB-002"
+        ],
+        "retrieved": [
+          "RB-DB-002",
+          "RB-ESC-007",
+          "RB-LAT-003",
+          "RB-OPS-006",
+          "RB-5XX-001"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "upstream connection timed out 110 high p95 latency on API gateway",
+        "expected": [
+          "RB-LAT-003"
+        ],
+        "retrieved": [
+          "RB-LAT-003",
+          "RB-DB-002",
+          "RB-5XX-001",
+          "RB-ESC-007",
+          "RB-OPS-006"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "JWT signature has expired 401 unauthorized token rotation failure",
+        "expected": [
+          "RB-AUTH-004"
+        ],
+        "retrieved": [
+          "RB-AUTH-004",
+          "RB-ESC-007",
+          "RB-LAT-003",
+          "RB-DB-002",
+          "RB-OPS-006"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "worker queue backlog Celery pending tasks high memory consumption",
+        "expected": [
+          "RB-JOB-005"
+        ],
+        "retrieved": [
+          "RB-JOB-005",
+          "RB-ESC-007",
+          "RB-5XX-001",
+          "RB-DB-002",
+          "RB-LAT-003"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "abort production rollout and revert service to last stable release",
+        "expected": [
+          "RB-OPS-006"
+        ],
+        "retrieved": [
+          "RB-OPS-006",
+          "RB-5XX-001",
+          "RB-DB-002",
+          "RB-LAT-003",
+          "RB-AUTH-004"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "Sev-1 critical outage communication cadence and on-call escalation SLA",
+        "expected": [
+          "RB-ESC-007"
+        ],
+        "retrieved": [
+          "RB-ESC-007",
+          "RB-LAT-003",
+          "RB-JOB-005",
+          "RB-OPS-006",
+          "RB-AUTH-004"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "null pointer exception crash loop in order database handler",
+        "expected": [
+          "RB-5XX-001",
+          "RB-DB-002"
+        ],
+        "retrieved": [
+          "RB-5XX-001",
+          "RB-JOB-005",
+          "RB-DB-002",
+          "RB-OPS-006",
+          "RB-ESC-007"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 0.5,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.667,
+          "precision@5": 0.4
+        }
+      },
+      {
+        "query": "scale worker pool background job queue starvation",
+        "expected": [
+          "RB-JOB-005"
+        ],
+        "retrieved": [
+          "RB-JOB-005",
+          "RB-DB-002",
+          "RB-ESC-007",
+          "RB-LAT-003",
+          "RB-AUTH-004"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "expired service account LDAP credentials causing auth outage",
+        "expected": [
+          "RB-AUTH-004"
+        ],
+        "retrieved": [
+          "RB-AUTH-004",
+          "RB-ESC-007",
+          "RB-OPS-006",
+          "RB-JOB-005",
+          "RB-DB-002"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      }
+    ]
+  },
+  "SEMANTIC": {
+    "mrr": 0.9333,
+    "recall": {
+      "recall@1": 0.8,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    "precision": {
+      "precision@1": 0.9,
+      "precision@3": 0.4,
+      "precision@5": 0.24
+    },
+    "query_evaluations": [
+      {
+        "query": "HTTP 502 Bad Gateway and 500 internal server error spike after latest deployment",
+        "expected": [
+          "RB-5XX-001",
+          "RB-OPS-006"
+        ],
+        "retrieved": [
+          "RB-5XX-001",
+          "RB-OPS-006",
+          "RB-LAT-003",
+          "RB-AUTH-004",
+          "RB-ESC-007"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 0.5,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.667,
+          "precision@5": 0.4
+        }
+      },
+      {
+        "query": "database connection pool timeout QueuePool limit of size 20 overflow reached",
+        "expected": [
+          "RB-DB-002"
+        ],
+        "retrieved": [
+          "RB-DB-002",
+          "RB-ESC-007",
+          "RB-LAT-003",
+          "RB-JOB-005",
+          "RB-5XX-001"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "upstream connection timed out 110 high p95 latency on API gateway",
+        "expected": [
+          "RB-LAT-003"
+        ],
+        "retrieved": [
+          "RB-LAT-003",
+          "RB-DB-002",
+          "RB-5XX-001",
+          "RB-OPS-006",
+          "RB-ESC-007"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "JWT signature has expired 401 unauthorized token rotation failure",
+        "expected": [
+          "RB-AUTH-004"
+        ],
+        "retrieved": [
+          "RB-AUTH-004",
+          "RB-ESC-007",
+          "RB-5XX-001",
+          "RB-OPS-006",
+          "RB-JOB-005"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "worker queue backlog Celery pending tasks high memory consumption",
+        "expected": [
+          "RB-JOB-005"
+        ],
+        "retrieved": [
+          "RB-JOB-005",
+          "RB-ESC-007",
+          "RB-LAT-003",
+          "RB-OPS-006",
+          "RB-DB-002"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "abort production rollout and revert service to last stable release",
+        "expected": [
+          "RB-OPS-006"
+        ],
+        "retrieved": [
+          "RB-ESC-007",
+          "RB-5XX-001",
+          "RB-OPS-006",
+          "RB-DB-002",
+          "RB-LAT-003"
+        ],
+        "reciprocal_rank": 0.333,
+        "metrics": {
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 0.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "Sev-1 critical outage communication cadence and on-call escalation SLA",
+        "expected": [
+          "RB-ESC-007"
+        ],
+        "retrieved": [
+          "RB-ESC-007",
+          "RB-AUTH-004",
+          "RB-DB-002",
+          "RB-OPS-006",
+          "RB-5XX-001"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "null pointer exception crash loop in order database handler",
+        "expected": [
+          "RB-5XX-001",
+          "RB-DB-002"
+        ],
+        "retrieved": [
+          "RB-DB-002",
+          "RB-JOB-005",
+          "RB-5XX-001",
+          "RB-LAT-003",
+          "RB-ESC-007"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 0.5,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.667,
+          "precision@5": 0.4
+        }
+      },
+      {
+        "query": "scale worker pool background job queue starvation",
+        "expected": [
+          "RB-JOB-005"
+        ],
+        "retrieved": [
+          "RB-JOB-005",
+          "RB-DB-002",
+          "RB-ESC-007",
+          "RB-OPS-006",
+          "RB-LAT-003"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "expired service account LDAP credentials causing auth outage",
+        "expected": [
+          "RB-AUTH-004"
+        ],
+        "retrieved": [
+          "RB-AUTH-004",
+          "RB-ESC-007",
+          "RB-5XX-001",
+          "RB-OPS-006",
+          "RB-LAT-003"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      }
+    ]
+  },
+  "HYBRID": {
+    "mrr": 1.0,
+    "recall": {
+      "recall@1": 0.9,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    "precision": {
+      "precision@1": 1.0,
+      "precision@3": 0.4,
+      "precision@5": 0.24
+    },
+    "query_evaluations": [
+      {
+        "query": "HTTP 502 Bad Gateway and 500 internal server error spike after latest deployment",
+        "expected": [
+          "RB-5XX-001",
+          "RB-OPS-006"
+        ],
+        "retrieved": [
+          "RB-5XX-001",
+          "RB-LAT-003",
+          "RB-OPS-006",
+          "RB-AUTH-004",
+          "RB-ESC-007"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 0.5,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.667,
+          "precision@5": 0.4
+        }
+      },
+      {
+        "query": "database connection pool timeout QueuePool limit of size 20 overflow reached",
+        "expected": [
+          "RB-DB-002"
+        ],
+        "retrieved": [
+          "RB-DB-002",
+          "RB-ESC-007",
+          "RB-LAT-003",
+          "RB-OPS-006",
+          "RB-5XX-001"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "upstream connection timed out 110 high p95 latency on API gateway",
+        "expected": [
+          "RB-LAT-003"
+        ],
+        "retrieved": [
+          "RB-LAT-003",
+          "RB-DB-002",
+          "RB-5XX-001",
+          "RB-ESC-007",
+          "RB-OPS-006"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "JWT signature has expired 401 unauthorized token rotation failure",
+        "expected": [
+          "RB-AUTH-004"
+        ],
+        "retrieved": [
+          "RB-AUTH-004",
+          "RB-ESC-007",
+          "RB-LAT-003",
+          "RB-5XX-001",
+          "RB-OPS-006"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "worker queue backlog Celery pending tasks high memory consumption",
+        "expected": [
+          "RB-JOB-005"
+        ],
+        "retrieved": [
+          "RB-JOB-005",
+          "RB-ESC-007",
+          "RB-LAT-003",
+          "RB-5XX-001",
+          "RB-DB-002"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "abort production rollout and revert service to last stable release",
+        "expected": [
+          "RB-OPS-006"
+        ],
+        "retrieved": [
+          "RB-OPS-006",
+          "RB-5XX-001",
+          "RB-ESC-007",
+          "RB-DB-002",
+          "RB-LAT-003"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "Sev-1 critical outage communication cadence and on-call escalation SLA",
+        "expected": [
+          "RB-ESC-007"
+        ],
+        "retrieved": [
+          "RB-ESC-007",
+          "RB-AUTH-004",
+          "RB-LAT-003",
+          "RB-OPS-006",
+          "RB-DB-002"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "null pointer exception crash loop in order database handler",
+        "expected": [
+          "RB-5XX-001",
+          "RB-DB-002"
+        ],
+        "retrieved": [
+          "RB-5XX-001",
+          "RB-DB-002",
+          "RB-JOB-005",
+          "RB-OPS-006",
+          "RB-LAT-003"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 0.5,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.667,
+          "precision@5": 0.4
+        }
+      },
+      {
+        "query": "scale worker pool background job queue starvation",
+        "expected": [
+          "RB-JOB-005"
+        ],
+        "retrieved": [
+          "RB-JOB-005",
+          "RB-DB-002",
+          "RB-ESC-007",
+          "RB-LAT-003",
+          "RB-OPS-006"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      },
+      {
+        "query": "expired service account LDAP credentials causing auth outage",
+        "expected": [
+          "RB-AUTH-004"
+        ],
+        "retrieved": [
+          "RB-AUTH-004",
+          "RB-ESC-007",
+          "RB-OPS-006",
+          "RB-5XX-001",
+          "RB-JOB-005"
+        ],
+        "reciprocal_rank": 1.0,
+        "metrics": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.333,
+          "precision@5": 0.2
+        }
+      }
+    ]
+  }
+}
