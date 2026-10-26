@@ -3,7 +3,9 @@ End-to-End System Verification Script
 Directly tests all 10 core API workflows and outputs operational validation metrics.
 """
 from fastapi.testclient import TestClient
+
 from app.main import app
+
 
 def verify_all():
     client = TestClient(app)
